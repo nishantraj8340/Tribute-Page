@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Tribute Page | Bhagat Singh </title>
+    <style type=text/css>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content.containers {
+            padding: 30px;
+            position: relative;
+        }
+
+
+        .background-image::before {
+            content: '';
+            position: absolute;
+            background-image: url("");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 300vh;
+            height: 200vh;
+            opacity: .3;
+            z-index: 2;
+        }
+
+
+        .content-container .contents {
+            position: relative;
+            z-index: 5;
+        }
+
+
+        .top_section {
+            margin-top: 120px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top_section h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(96, 41, 204);
+            text-transform: uppercase;
+        }
+
+        .top_section h4 {
+            font-size: 30px;
+            text-align: center;
+            color: rgb(240, 35, 35);
+        }
+
+        .image_container {
+            border-radius: 60%;
+            overflow: hidden;
+        }
+
+        .image_container,
+        img {
+            width: 300px;
+            height: 320px;
+        }
+
+        .about_section {
+            margin-top: 55px;
+        }
+
+        .about_section h2 {
+            font-size: 80px;
+            font-weight: 400px;
+            font-style: oblique;
+            text-align: center;
+            color: rgb(188, 69, 248);
+            margin-bottom: 25px;
+        }
+
+        .about_section p {
+            font-size: 20px;
+            color: rgb(9, 8, 9);
+            line-height: 25px;
+            letter-spacing: 1.2px;
+            text-align: justify;
+        }
+
+        .biography_section {
+            margin: 50px 0;
+        }
+
+        .biography_section h3 {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        .biography_section ul {
+            margin-left: 50px;
+        }
+
+        .biography_section li {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .biography_section b {
+            font-size: 25px;
+            color: rgb(110, 5, 70);
+        }
+
+        footer {
+            margin: 50px 0;
+        }
+
+        footer p {
+            text-align: end;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="background-image">
+        <div class="content.conatiner">
+            <div class="contents">
+                <div class="container">
+                    <div class="content">
+
+
+                        <section class="top_section">
+                            <div class="image_container">
+                                <img src="data:image/jpeg;base64,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 "
+                                    alt="tribute" />
+                            </div>
+
+                            <div>
+                                <h1> Bhagat Singh </h1>
+                                <h4> 27 September 1907 – 23 March 1931 </h4>
+                            </div>
+                        </section>
+                        <section class="about_section">
+                            <h2>Bhagat Singh</h2>
+                            <p>Bhagat Singh (1907–1931) was an influential figure in the Indian independence movement
+                                against British colonial rule. Born on September 28, 1907, in Banga, Punjab (now in
+                                Pakistan), he came from a family with a history of anti-colonial activism. Bhagat
+                                Singh's early exposure to the Jallianwala Bagh massacre in 1919 deeply influenced his
+                                perspective and fueled his commitment to the cause of India's independence.
+                                <b>Bhagat Singh</b>
+
+
+                                As a young revolutionary, Bhagat Singh joined the Hindustan Socialist Republican Association (HSRA), an organization that advocated for the overthrow of British rule through armed resistance. His initiation into political activism occurred during a tumultuous period in Indian history marked by oppressive British policies and growing discontent among the Indian populace.
+
+                                One of the pivotal moments in Bhagat Singh's journey was the protest against the Simon Commission in 1928. During the demonstration, the police's actions led to the death of Lala Lajpat Rai. Seeking revenge, Bhagat Singh and his associates planned to target the police officer responsible, James A. Scott. However, in a case of mistaken identity, they ended up killing J.P. Saunders instead.
+                                
+                                In a daring act of defiance, Bhagat Singh and Batukeshwar Dutt orchestrated the bombing of the Central Legislative Assembly in Delhi on April 8, 1929. While their intention was not to cause harm, the act was a symbolic protest against repressive laws. The subsequent trial became a platform for Bhagat Singh to articulate his revolutionary ideals and critique British imperialism.
+                                
+                                Arrested and charged with the murder of J.P. Saunders, Bhagat Singh, along with Rajguru and Sukhdev, faced a trial that drew widespread attention. Despite public protests and appeals for clemency, they were sentenced to death. On March 23, 1931, in Lahore Central Jail, Bhagat Singh and his comrades were executed. This day is commemorated as Shaheed Diwas (Martyrs' Day) in their honor.
+                                
+                                Bhagat Singh's legacy extends beyond his acts of defiance. He was not only a revolutionary but also a prolific writer and thinker. His prison diaries, letters, and articles reflected his deep commitment to socialism, equality, and the vision of a just society. Bhagat Singh's life and sacrifices continue to inspire generations, making him a symbol of courage, patriotism, and resistance against oppression in the annals of Indian history.
+                            </p>
+                        </section>
+                        <section class="biography_section">
+                            <h3> <b>Biographies</b></h3>
+                            <ul>
+                                <li>
+                                    Bhagat Singh, born on September 28, 1907, in Banga, Punjab (now in Pakistan), was a revolutionary and a key figure in the Indian independence movement. His life was marked by a deep commitment to the cause of freedom and justice. Here is a detailed biography of Bhagat Singh:
+                                    
+                                    Early Life:
+                                    Bhagat Singh was born into a Sikh family that had a history of activism against British colonial rule. His father, Kishan Singh, and uncle, Ajit Singh, were active participants in the struggle for independence. Bhagat Singh's early exposure to the Jallianwala Bagh massacre in 1919 left a lasting impact on him, shaping his views on the need for India's liberation.
+                                    
+                                    Entry into Politics:
+                                    Influenced by his family's background and the prevailing political climate, Bhagat Singh entered the political arena at a young age. He joined the National College in Lahore, where he actively participated in various socio-political activities. Bhagat Singh became associated with the Non-Cooperation Movement led by Mahatma Gandhi but later distanced himself due to the movement's suspension following the Chauri Chaura incident.
+                                    
+                                    The Simon Commission Protest:
+                                    One of the turning points in Bhagat Singh's life was the protest against the Simon Commission in 1928. During the demonstration, Lala Lajpat Rai was fatally injured in a police baton charge. Seeking retribution, Bhagat Singh and his associates planned to target the police officer, James A. Scott. However, in a case of mistaken identity, they ended up killing J.P. Saunders.
+                                    
+                                    Central Legislative Assembly Bombing:
+                                    In an act of symbolic protest against repressive laws, Bhagat Singh and Batukeshwar Dutt threw non-lethal smoke bombs in the Central Legislative Assembly in Delhi on April 8, 1929. The purpose was to draw attention to the oppressive British laws and to use the subsequent trial as a platform to voice their revolutionary ideals.
+                                    
+                                    Arrest and Trial:
+                                    Bhagat Singh, along with Rajguru and Sukhdev, was arrested and charged with the murder of J.P. Saunders. The trial gained widespread attention, with Bhagat Singh using the courtroom as a forum to express his anti-colonial sentiments and critique British imperialism. Despite public protests and appeals for clemency, they were sentenced to death.
+                                    
+                                    Execution and Legacy:
+                                    On March 23, 1931, Bhagat Singh, Rajguru, and Sukhdev were executed in Lahore Central Jail. Their sacrifice for the country's independence has left an indelible mark on Indian history. Bhagat Singh's legacy continues to inspire generations, with his courage, patriotism, and commitment to justice making him an enduring symbol of resistance against oppression.
+                                    
+                                    Ideological Contributions:
+                                    Bhagat Singh was not only a revolutionary activist but also a prolific writer and thinker. His prison diaries, letters, and articles reflect his deep commitment to socialism, equality, and a vision of a just society. Bhagat Singh's writings continue to be studied and revered for their insights into his ideological perspective and his vision for a free India.
+                                    
+                                    
+                                    
+                                    
+                                    </li>
+
+                            </ul>
+                        </section>
+                        <footer>
+                            <p>Read more about Bhagat_Singh_ on <a
+                                    href="https://en.wikipedia.org/wiki/Bhagat_Singh">Wikipedia.</a></p>
+
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
